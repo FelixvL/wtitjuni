@@ -1,30 +1,44 @@
 <html>
 <head>
 <style>
-
+	td{
+		height: 82px;
+		width: 82px;
+		border: 2px dashed red;
+	}
 </style>
 <script>
 function start(){
-	var getallen = [6,9,33,4,7,77,34,21];
 
-	var weekdagen = ["maandag","dinsdag","woensdag","donderdag","vrijdag"];
-//	console.log(getallen[2]);
-	getallen[1] = 66;
-//	console.log(getallen[1]);
-	for(var s = 0 ; s < getallen.length ; s++){
-		console.log(getallen[s]);
+	var status = [2,1,1,1,0,2];
 
+	for(var s = 0 ; s < status.length ; s++){
+		var vakjeid = "vakje"+s;
+		console.log(vakjeid);
+		if(status[s] == 1){
+			document.getElementById(vakjeid).style.backgroundColor = 'red';
+		}
+		if(status[s] == 2){
+			document.getElementById(vakjeid).style.backgroundColor = 'yellow';
+		}
 	}
-	for(var s = 0 ; s < weekdagen.length ; s++){
-		console.log(weekdagen[s]);
 
-	}
 }
 
 </script>
 </head>
 <body>
-Tel tot: <input type="number" id="ingevoerd">
+<!--    Tel tot: <input type="number" id="ingevoerd">    -->
 <input type="button" onclick="start()" value="Kijk mij!">
+<table>
+	<tr>
+		<td id="vakje0"></td>
+		<td id="vakje1"></td>
+		<td id="vakje2"></td>
+		<td id="vakje3"></td>
+		<td id="vakje4"></td>
+		<td id="vakje5"></td>
+	</tr>
+</table>
 </body>
 </html>
