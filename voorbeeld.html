@@ -3,18 +3,14 @@
 <style>
 </style>
 <script>
-	var mijngetal = 0;
+	var wissel = true;
 	function start(){
-		
-		var uitkomst = mijngetal * mijngetal;
-		mijngetal += 13;
-		mijngetal = mijngetal + 1;
-		mijngetal += 1;
-		mijngetal++;
-		console.log(mijngetal);
-		if( mijngetal == 23   ){
-			alert("ja het is 23");
+		if(wissel){
+			console.log("geel");
+		}else{
+			console.log("rood");
 		}
+		wissel = !wissel;
 	}
 
 </script>
