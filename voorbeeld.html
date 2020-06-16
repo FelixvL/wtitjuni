@@ -1,66 +1,28 @@
-
-Has-a relatie
-Is-a relatie
-
-
-
-
-
-
-
-
-
-
-
-
 <html>
-
-<!-- css -->
+<head>
 <style>
-	b{
-		background-color : red;
-		font-size: 21px;
-	}
-	td{
-		border: 2px solid blue;
-   		width: 30px;
-		height:30px;
-	}
 </style>
-<!-- javascript -->
 <script>
-	function optellen(getal1, getal2){ // parameters
-		//alert(getal1);
-		console.log(getal1 + getal2);
-	}
-	function proberen(){
-		var mijnvar = document.getElementById("denaam").value;
-		document.getElementById("jojo").innerHTML = mijnvar;
-	}
-	function vakjeVullen(vakjeid){   
-		var elem = document.getElementById(vakjeid);
-		elem.bgColor = 'red';
-		elem.style.border = '5px solid green';
-		optellen(6,14); // argument
-		optellen(22,3);
-		optellen(3,3);
+	var mijngetal = 0;
+	function start(){
+		
+		var uitkomst = mijngetal * mijngetal;
+		mijngetal += 13;
+		mijngetal = mijngetal + 1;
+		mijngetal += 1;
+		mijngetal++;
+		console.log(mijngetal);
+		if( mijngetal == 23   ){
+			alert("ja het is 23");
+		}
 	}
 
 </script>
-
-
-
-
-Geef uw naam:
-<input type=text id="denaam" >
-<input type=button value="Klik maar" onclick=proberen()>
-
-Welkom: <b  id="jojo" > vul je naam in </b>
-
-<table>
-<tr><td id="vakje00" onclick="vakjeVullen('vakje00')"></td><td id="vakje01" onclick="vakjeVullen('vakje01')"></td></tr>
-<tr><td id="vakje10" onclick="vakjeVullen('vakje10')"></td><td id="vakje11" onclick="vakjeVullen('vakje11')"></td></tr>
-</table>
+</head>
+<body>
+	<input type="button" onclick="start()" value="Klik mij">
+	<input type="button" onclick="reset()" value="Reset">
+</body>
 </html>
 
 
