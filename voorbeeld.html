@@ -5,18 +5,26 @@
 </style>
 <script>
 function start(){
-	var invoer = document.getElementById("ingevoerd").value;
-	var echtegetal = parseInt(invoer);
-	console.log(echtegetal + echtegetal);
-    for(var x = 0; x < echtegetal; x++){
-        console.log("hoppa"+(x+1));
-    }
+	var getallen = [6,9,33,4,7,77,34,21];
+
+	var weekdagen = ["maandag","dinsdag","woensdag","donderdag","vrijdag"];
+//	console.log(getallen[2]);
+	getallen[1] = 66;
+//	console.log(getallen[1]);
+	for(var s = 0 ; s < getallen.length ; s++){
+		console.log(getallen[s]);
+
+	}
+	for(var s = 0 ; s < weekdagen.length ; s++){
+		console.log(weekdagen[s]);
+
+	}
 }
 
 </script>
 </head>
 <body>
 Tel tot: <input type="number" id="ingevoerd">
-<input type="button" onclick=start() value="Kijk mij!">
+<input type="button" onclick="start()" value="Kijk mij!">
 </body>
 </html>
