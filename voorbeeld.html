@@ -3,23 +3,20 @@
 <style>
 </style>
 <script>
-	var getal = 0;
+	///// Dont Repeat Yourself
 	function start(){
-		getal++;
-		if(getal % 2 == 0){
-			console.log("Rood"+getal);
-		}else{
-			console.log("Geel"+getal);
-
+		for(var x = 0; x < 100; x++){
+			console.log("hoppa"+x);
 		}
 
+
 	}
+
 
 </script>
 </head>
 <body>
 	<input type="button" onclick="start()" value="Klik mij">
-	<input type="button" onclick="reset()" value="Reset">
 </body>
 </html>
 
