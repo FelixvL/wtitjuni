@@ -1,23 +1,22 @@
 <html>
 <head>
 <style>
+
 </style>
 <script>
-	///// Dont Repeat Yourself
-	function start(){
-		for(var x = 0; x < 100; x++){
-			console.log("hoppa"+x);
-		}
-
-
-	}
-
+function start(){
+	var invoer = document.getElementById("ingevoerd").value;
+	var echtegetal = parseInt(invoer);
+	console.log(echtegetal + echtegetal);
+    for(var x = 0; x < echtegetal; x++){
+        console.log("hoppa"+(x+1));
+    }
+}
 
 </script>
 </head>
 <body>
-	<input type="button" onclick="start()" value="Klik mij">
+Tel tot: <input type="number" id="ingevoerd">
+<input type="button" onclick=start() value="Kijk mij!">
 </body>
 </html>
-
-
